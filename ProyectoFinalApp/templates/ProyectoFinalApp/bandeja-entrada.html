@@ -1,0 +1,20 @@
+{% extends 'ProyectoFinalApp/base.html'%}
+{% load static %}
+<title>Listado Posts</title>
+{% block contenidoPagina %}
+    {% for mensaje in mensajes %}
+        <div class="container">    
+            <div class="row">
+                <div class="col-lg-6">    
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="small text-muted">{{mensaje.creado}}</div>
+                            <h2 class="card-title h4">{{mensaje.origen}}</h2>
+                            <p class="card-text">{{mensaje.mensaje}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

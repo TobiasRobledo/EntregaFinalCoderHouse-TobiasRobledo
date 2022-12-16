@@ -1,0 +1,59 @@
+{% extends 'ProyectoFinalApp/base.html'%}
+{% load static %}
+<title>Perfil</title>
+{% block contenidoPagina %}
+
+<header class="py-5 bg-light border-bottom mb-4">
+    <div class="container">
+        <div class="text-center my-5">
+            <h1 class="fw-bolder">Bienvenido al apartado de tu perfil</h1>
+        </div>
+    </div>
+</header>
+<!-- Page content-->
+<div class="container">
+    <div class="row">
+        <!-- Blog entries-->
+        <div class="col-lg-8">
+            <!-- Nested row for non-featured blog posts-->
+            <div class="row">
+                <div class="col-lg-6">
+                    <!-- Blog post-->
+                    <div class="card mb-4">
+                        <a href="#!"><img class="card-img-top" src="https://dummyimage.com/600x400/000000/ededed.jpg&text=Imágen+del+post" alt="..." /></a>
+                        <div class="card-body">
+                            <h2 class="card-title h4"><a class="nav-link" href="{% url 'perfil' %}">Eliminar Perfil</a></h2>
+                        </div>
+                    </div>
+                    <!-- Blog post-->
+                    <div class="card mb-4">
+                        <a href="#!"><img class="card-img-top" src="https://dummyimage.com/600x400/000000/ededed.jpg&text=Imágen+del+post" alt="..." /></a>
+                        <div class="card-body">
+                            <h2 class="card-title h4"><a class="nav-link" href="{% url 'editar perfil' %}">Editar Perfil</a></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <!-- Blog post-->
+                    {% if user.avatar.imagen.url %}
+                    <div class="card mb-4">
+                        <a href="#!"><img class="card-img-top" src="{{ user.avatar.imagen.url }}" alt="..." /></a>
+                        <div class="card-body">
+                            <h2 class="card-title h4"><a class="nav-link" href="{% url 'avatar' %}">Avatar</a></h2>
+                        </div>
+                    </div>
+                    {% else %}
+                    <div class="card mb-4">
+                        <a href="#!"><img class="card-img-top" src="https://affinitaslegal.com/wp-content/uploads/2020/08/imagen-perfil-sin-foto.jpg" alt="..." /></a>
+                        <div class="card-body">
+                            <h2 class="card-title h4"><a class="nav-link" href="{% url 'agregar avatar' %}">Crear Avatar</a></h2>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

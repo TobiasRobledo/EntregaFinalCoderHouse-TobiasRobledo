@@ -1,0 +1,22 @@
+{% extends 'ProyectoFinalApp/base.html'%}
+{% load static %}
+<title>Listado Posts</title>
+{% block contenidoPagina %}
+    {% for post in posts %}
+        <div class="container">    
+            <div class="row">
+                <div class="col-lg-6">    
+                    <div class="card mb-4">
+                        <a href="#!"><img class="card-img-top" src="{{post.imagen}}" alt="..." /></a>
+                        <div class="card-body">
+                            <div class="small text-muted">20 de Diciembre 2022</div>
+                            <h2 class="card-title h4">{{post.titulo}}</h2>
+                            <p class="card-text">{{post.descripcion}}</p>
+                            <a class="btn btn-primary" href="#!">Leer más →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

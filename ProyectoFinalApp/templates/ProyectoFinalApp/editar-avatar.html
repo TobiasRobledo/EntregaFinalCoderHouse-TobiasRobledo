@@ -1,0 +1,30 @@
+{% extends 'ProyectoFinalApp/base.html'%}
+{% load static %}
+<title>Editar Avatar</title>
+
+{% block contenidoPagina %}
+<section class="bg-light py-5">
+    <div class="container px-5">
+        <h2></h2>
+        <br>
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-6">
+
+                <div class="card">
+                    <div class="card-header text-center">
+                        Editar Avatar
+                    </div>
+                    <div class="card-body">
+
+                        <form action="" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {{form.as_p}}
+                            <input type="submit" value="Crear avatar">
+                        </form>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

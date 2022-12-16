@@ -1,0 +1,78 @@
+{% extends 'ProyectoFinalApp/base.html'%}
+{% load static %}
+{% block contenidoPagina %}
+
+        <header class="py-5 bg-light border-bottom mb-4">
+            <div class="container">
+                <div class="text-center my-5">
+                    <h1 class="fw-bolder">Bienvenido a test de blogs</h1>
+                    <p class="lead mb-0">Una página de testeo</p>
+                </div>
+            </div>
+        </header>
+        <!-- Page content-->
+        <div class="container">
+            <div class="row">
+                <!-- Blog entries-->
+                <div class="col-lg-8">
+                    <!-- Featured blog post-->
+                    <div class="card mb-4">
+                        <a href="#!"><img class="card-img-top" src="https://dummyimage.com/600x400/000000/ededed.jpg&text=Imágen+del+post" alt="..." /></a>
+                        <div class="card-body">
+                            <div class="small text-muted">20 de Diciembre 2022</div>
+                            <h2 class="card-title">Título del Post destacado</h2>
+                            <p class="card-text">Descripción del post destacado.</p>
+                            <a class="btn btn-primary" href="#!">Leer más →</a>
+                        </div>
+                    </div>
+                    <!-- Nested row for non-featured blog posts-->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <!-- Blog post-->
+                            <div class="card mb-4">
+                                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/600x400/000000/ededed.jpg&text=Imágen+del+post" alt="..." /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">20 de Diciembre 2022</div>
+                                    <h2 class="card-title h4">Título del Post</h2>
+                                    <p class="card-text">Descripción del post.</p>
+                                    <a class="btn btn-primary" href="#!">Leer más →</a>
+                                </div>
+                            </div>
+                            <!-- Blog post-->
+                            <div class="card mb-4">
+                                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/600x400/000000/ededed.jpg&text=Imágen+del+post" alt="..." /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">20 de Diciembre 2022</div>
+                                    <h2 class="card-title h4">Título del Post</h2>
+                                    <p class="card-text">Descripción del post.</p>
+                                    <a class="btn btn-primary" href="#!">Leer más →</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <!-- Blog post-->
+                            <div class="card mb-4">
+                                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/600x400/000000/ededed.jpg&text=Imágen+del+post" alt="..." /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">20 de Diciembre 2022</div>
+                                    <h2 class="card-title h4">Título del Post</h2>
+                                    <p class="card-text">Descripción del post.</p>
+                                    <a class="btn btn-primary" href="#!">Leer más →</a>
+                                </div>
+                            </div>
+                            <!-- Blog post-->
+                            <div class="card mb-4">
+                                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/600x400/000000/ededed.jpg&text=Imágen+del+post" alt="..." /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">20 de Diciembre 2022</div>
+                                    <h2 class="card-title h4">Título del Post</h2>
+                                    <p class="card-text">Descripción del post.</p>
+                                    <a class="btn btn-primary" href="#!">Leer más →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}
